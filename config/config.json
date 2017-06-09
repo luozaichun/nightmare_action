@@ -1,0 +1,12 @@
+{
+  "deep":2,
+  "serch_link":"https://www.baidu.com/",
+  "search_input":"#kw",
+  "type_key":"爱奇艺",
+  "submit":"#su",
+  "wait_element":"#wrapper_wrapper #container",
+  "click_ele":[
+    "#content_left .result[id='1'] .favurl"
+
+  ]
+}
