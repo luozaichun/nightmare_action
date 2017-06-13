@@ -1,14 +1,12 @@
 {
-  "deep":2,
+  "type":1,
   "serch_link":"https://www.2345.com",
-  "search_input":"#kw",
-  "type_key":"爱奇艺",
-  "submit":"#su",
-  "wait_element":"#wrapper_wrapper #container",
+  "search_input":"#J_schInbox input",
+  "submit":"#j_search_sbm",
+  "wait_time":1000,
+  "file":"../dir/key.txt",
+  "main_ele":"#content_left h3.t",
   "deep_ele":[
-    "#content_left .result[id='1'] .favurl",
-    "#block-B .mod_focus-index_list li a",
-    "#block-I ul li .site-piclist_pic a",
-    "#block-G .site-piclist li .site-piclist_pic a"
+    "h1"
   ]
 }

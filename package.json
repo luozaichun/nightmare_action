@@ -11,6 +11,7 @@
   "devDependencies": {
     "co": "^4.6.0",
     "fs": "^0.0.1-security",
-    "nightmare": "^2.10.0"
+    "nightmare": "^2.10.0",
+    "nightmare-window-manager": "^0.2.2"
   }
 }
