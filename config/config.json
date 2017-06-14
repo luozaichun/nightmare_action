@@ -3,9 +3,8 @@
   "serch_link":"https://www.2345.com",
   "search_input":"#J_schInbox input",
   "submit":"#j_search_sbm",
-  "wait_time":1000,
-  "file":"../dir/key.txt",
-  "main_ele":"#content_left h3.t",
+  "file":"../dir/game_key.txt",
+  "main_ele":"#content_left h3.t a",
   "deep_ele":[
     "h1"
   ]

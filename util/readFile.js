@@ -10,7 +10,6 @@ exports.fileData = function (file) {
         "paw":data[n].password?data[n].password:"",
         "type_key":data[n].key?data[n].key:""
     };
-    console.log(result)
     return result;
 };
 
