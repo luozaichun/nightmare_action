@@ -3,12 +3,66 @@ require('nightmare-window-manager')(Nightmare);
 const nightmare = Nightmare({show:true});
 const co = require('co');
 const config=require("../config/config.json");
-const file=require("../util/readFile");
+/*const file=require("../util/readFile");*/
 const wait=require("../util/random");
-let data=file.fileData(config.file);
+/*let data=file.fileData(config.file);*/
 console.log(wait.waitRand());
 let child_nightmare = Nightmare({show:true});
 
+
+co(function *() {
+    console.log(111)
+    var title = yield nightmare
+        .windowManager()
+        .goto(config.serch_link)
+        .evaluate(()=> {
+            document.getElementById("#bdfm").setAttribute("target","_self");
+           /* document.querySelectorAll("#bdfm").value;*/
+        })
+        .then((result)=>{
+            console.log(result)
+        });
+       /* .type(config.search_input, "you")
+        .click(config.submit)
+        .waitWindowLoad()
+        .currentWindow()
+        .focusWindow(1)
+        .windows()
+        .evaluateWindow(function(parameter) {
+            return document.title + ' -- ' + parameter;
+        }, 'testparameter').then((result)=>{
+            console.log(111,result)
+        });*/
+    console.log(title)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 nightmare
     .windowManager()
     .goto(config.serch_link)
@@ -17,15 +71,24 @@ nightmare
     .click(config.submit)
     .waitWindowLoad()
     .currentWindow()
+    .windows()
+    .then(function(window){
+        console.log(window[1].url)
+        child_nightmare.evaluate(function() {
+            window.location.href="http://music.163.com/#/playlist?id=755809279&_hash=songlist-479223503"
+        }).waitWindowLoad()
+            .click("#content_left h3.t")
+            .evaluate(function() {
+                return document.querySelectorAll("#content_left h3.t a").href;
+            })
+            .then(function(title) {
+                console.log(1111)
+                console.log(title)
+            });
+    })
+*/
 
-    .evaluateWindow(function() {
-        console.log(1111)
-        return document.querySelectorAll("#content_left h3.t").innerHTML;
-    }).end()
-    .then(function(title) {
-        console.log(1111)
-        console.log(title)
-    });
+
 
 
 
