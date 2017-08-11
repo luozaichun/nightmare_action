@@ -7,6 +7,7 @@ let  randomBoth=function (Min, Max) {
 };
 let probability=randomBoth(1,100);
 let wait_time;
+/*概率*/
 exports.waitRand = function () {
     if (probability<=70){
         wait_time=randomBoth(120,180);
